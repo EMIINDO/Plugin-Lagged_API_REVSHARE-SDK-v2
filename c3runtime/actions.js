@@ -1,7 +1,7 @@
 "use strict";
 
 {
-	const C3 = globalThis.C3;
+
 
 
 	var showAdFnWrap=function(){console.log('show ad fn running')};
