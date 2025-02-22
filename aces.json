@@ -1,0 +1,112 @@
+﻿{
+	"gamefunctions": {
+		"actions": [
+			{
+				"id": "init-game",
+				"scriptName": "InitGame",
+				"highlight": true,
+				"params": [
+					{"id": "devid", "type": "string"},
+					{"id": "pubid", "type": "string"}
+				]
+			},
+			{
+				"id": "save-achievement",
+				"scriptName": "SaveAchievement",
+				"highlight": true,
+				"params": [
+					{"id": "award", "type": "string"}
+				]
+			},
+			{
+				"id": "save-score",
+				"scriptName": "SaveScore",
+				"highlight": true,
+				"params": [
+					{"id": "score", "type": "number"},
+					{"id": "board", "type": "string"}
+				]
+			}
+		]
+	},
+	"videoads": {
+		"conditions": [
+			{
+				"id": "pause-game",
+				"c2id": 0,
+				"scriptName": "PauseGame",
+				"isTrigger": true
+			},
+			{
+				"id": "resume-game",
+				"c2id": 1,
+				"scriptName": "ResumeGame",
+				"isTrigger": true
+			}
+		],
+		"actions": [
+			{
+				"id": "show-ad",
+				"scriptName": "ShowAd",
+				"highlight": true
+			}
+		]
+	},
+	"rewardads": {
+		"conditions": [
+			{
+				"id": "rewardad-check",
+				"c2id": 2,
+				"scriptName": "RewardAdCanShow",
+				"isTrigger": true
+			},
+			{
+				"id": "rewardad-success",
+				"c2id": 3,
+				"scriptName": "RewardAdSuccess",
+				"isTrigger": true
+			},
+			{
+				"id": "rewardad-failure",
+				"c2id": 4,
+				"scriptName": "RewardAdFailure",
+				"isTrigger": true
+			}
+		],
+		"actions": [
+			{
+				"id": "event-checkrewardad",
+				"scriptName": "rewardAdCheck",
+				"highlight": false
+			},
+			{
+				"id": "event-playrewardad",
+				"scriptName": "rewardAdPlay",
+				"highlight": false
+			}
+		]
+	},
+	"misc": {
+		"expressions": [
+			{
+				"id": "username",
+				"expressionName": "Username",
+				"scriptName": "Username",
+				"highlight": true,
+				"returnType": "string"
+			},{
+				"id": "user_id",
+				"expressionName": "UserID",
+				"scriptName": "UserID",
+				"highlight": true,
+				"returnType": "number"
+			},{
+				"id": "user_avatar",
+				"expressionName": "UserAvatar",
+				"scriptName": "UserAvatar",
+				"highlight": true,
+				"returnType": "string"
+			}
+		]
+	}
+}

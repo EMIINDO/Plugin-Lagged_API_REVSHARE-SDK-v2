@@ -1,0 +1,111 @@
+﻿{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for Lagged SDK",
+	"text": {
+		"plugins": {
+			"lagged_api_revshare": {
+				"name": "Lagged API Revenue Share",
+				"description": "Construct 3 plugin for Lagged API Rev Share",
+				"help-url": "https://lagged.com/contact",
+				"aceCategories":
+				{
+					"gamefunctions": "Game Functions",
+					"videoads": "Video Ads",
+					"rewardads": "Reward Ads",
+					"gamevents": "Game Events",
+					"misc": "Misc."
+				},
+				"conditions": {
+					"pause-game": {
+						"list-name": "Pause Game",
+						"display-text": "Pause Game for Ad",
+						"description": "An ad started playing, game should be paused and muted."
+					},
+					"resume-game": {
+						"list-name": "Resume Game",
+						"display-text": "Resume Game from Ad",
+						"description": "An ad just finished playing."
+					},
+					"rewardad-check": {
+						"list-name": "Reward Ad Check (step 1)",
+						"display-text": "Check Reward Ad (step 1)",
+						"description": "Triggered if you can show reward ad button"
+					},
+					"rewardad-success": {
+						"list-name": "Reward Ad Success",
+						"display-text": "Reward Ad Success (step 2)",
+						"description": "Give user reward"
+					},
+					"rewardad-failure": {
+						"list-name": "Reward Ad Failure",
+						"display-text": "Reward Ad Failure (step 2)",
+						"description": "Do not give reward"
+					}
+				},
+				"actions": {
+					"show-ad": {
+						"list-name": "Display an ad",
+						"display-text": "Display an ad",
+						"description": "Tries to display an ad. Make sure to also handle the appropriate conditions."
+					},"init-game": {
+						"list-name": "Init",
+						"display-text": "Init game ID. Dev ID: {0}, Dev Pub ID: {1}",
+						"description": "Init Lagged script and game",
+						"params": {
+							"devid": {
+								"name": "Lagged Developer ID",
+								"desc": "Your Lagged.com develper ID"
+							},"pubid": {
+								"name": "Google Adsense Publisher ID",
+								"desc": "Your Google Adsense publisher ID"
+							}
+						}
+					},"event-checkrewardad": {
+						"list-name": "Check if Reward Ad Available (step 1)",
+						"display-text": "Check Reward Ad availability",
+						"description": "Check if a reward ad is ready to play. Will trigger Reward Ad Check if true"
+					},"event-playrewardad": {
+						"list-name": "Play Reward Ad (step 2)",
+						"display-text": "Play Reward Ad",
+						"description": "Play a reward ad, will trigger Reward Ad Success or Failure"
+					},"save-achievement": {
+						"list-name": "Save Achievement",
+						"display-text": "Save Achievement ID {0}",
+						"description": "Save an achievement",
+						"params": {
+							"award": {
+								"name": "Achievement ID",
+								"desc": "Achievement id"
+							}
+						}
+					},"save-score": {
+						"list-name": "Save Score",
+						"display-text": "Save score {0} to board id: {1}",
+						"description": "Save a high score",
+						"params": {
+							"score": {
+								"name": "Score (number)",
+								"desc": "The high score (number) to save"
+							},"board": {
+								"name": "Board ID",
+								"desc": "Board ID to save score to"
+							}
+						}
+					}
+				},
+				"expressions": {
+					"username": {
+						"description": "Username of player",
+						"translated-name": "Username"
+					},"user_id": {
+						"description": "User ID of player",
+						"translated-name": "UserID"
+					},"user_avatar": {
+						"description": "User Avatar of player",
+						"translated-name": "UserAvatar"
+					}
+				}
+			}
+		}
+	}
+}
